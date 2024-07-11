@@ -1,11 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarea2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .contenedor {
+            height: auto;
+            width: 300px;
+            background-color: aquamarine;
+            border: black solid 2px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contenedor2 {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .mas, .menos {
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .mas {
+            background-color: greenyellow;
+            border: 2px solid black;
+        }
+        .menos {
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .mas:hover {
+            background-color: limegreen;
+            transform: scale(1.1);
+        }
+        .menos:hover {
+            background-color: gold;
+            transform: scale(1.1);
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div>
+        <h1>INGENERÍA DE SOFTWARE 2</h1>
+        <div id="container" class="contenedor">
+            <form action="#" id="formulario">
+                <div id="container2" class="contenedor2">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido">
+                </div>
+                <button type="submit" id="btn">Enviar</button>
+            </form>
+            <p></p>
+            <div class="mas" id="mas">+</div>
+            <div class="menos" id="menos">-</div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
+
 </html>
